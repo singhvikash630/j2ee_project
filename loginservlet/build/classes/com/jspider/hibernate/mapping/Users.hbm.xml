@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.8//EN" 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+ 
+ <class name="com.jspider.login.pojo.Users" table="users">
+ <id name="regno" type="java.lang.Integer" column="regno" />
+<property name="Password" type="java.lang.String" column="password" />
+<property name="Isadmin" type="java.lang.String" column="isadmin" />
+ </class>
+
+</hibernate-mapping>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>jsppractise</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>useBean</servlet-name>
+    <jsp-file>/test.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>useBean</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>useBean1</servlet-name>
+    <jsp-file>/test1.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>useBean1</servlet-name>
+    <url-pattern>/test1</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>useBean2</servlet-name>
+    <servlet-class>cm.servlet.DemoTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>useBean2</servlet-name>
+    <url-pattern>/test2</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

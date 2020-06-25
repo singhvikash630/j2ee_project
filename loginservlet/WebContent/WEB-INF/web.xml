@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>loginservlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>jsp/login.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  <servlet-name>AddUser</servlet-name>
+  <servlet-class>com.jspider.login.servlet.AddUser</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>AddUser</servlet-name>
+  <url-pattern>/addUser</url-pattern>
+  </servlet-mapping>
+ 
+  
+  
+  <servlet>
+  <servlet-name>changePassword</servlet-name>
+  <servlet-class>com.jspider.login.servlet.ChangePassword</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>changePassword</servlet-name>
+  <url-pattern>/changePassword</url-pattern>
+  </servlet-mapping>
+ 
+  
+  <servlet>
+  <servlet-name>Logout</servlet-name>
+  <!-- <servlet-class>com.jspider.login.servlet.Logout</servlet-class>-->
+  <jsp-file>/jsp/logout.jsp</jsp-file>
+   </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Logout</servlet-name>
+  <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>modifyUser</servlet-name>
+  <!-- <servlet-class>com.jspider.login.servlet.Logout</servlet-class>-->
+  <jsp-file>/jsp/modifyUser.jsp</jsp-file>
+   </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>modifyUser</servlet-name>
+  <url-pattern>/ModifyUser</url-pattern>
+  </servlet-mapping>
+ 
+  
+  
+  
+ <!--<session-config>
+  <session-timeout>1</session-timeout>
+  </session-config>-->
+  
+  
+  <servlet>
+  <servlet-name>ModifyUser</servlet-name>
+  <servlet-class>com.jspider.login.servlet.ModifyUser</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ModifyUser</servlet-name>
+  <url-pattern>/modifyUser</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>LoginServlet</servlet-name>
+  <servlet-class>com.jspider.login.servlet.LoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>LoginServlet</servlet-name>
+  <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  
+<servlet>
+  <servlet-name>LoginError</servlet-name>
+  <!-- <servlet-class>com.jspider.login.servlet.LoginError</servlet-class> -->
+  <jsp-file>/jsp/loginError.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>LoginError</servlet-name>
+  <url-pattern>/LoginError</url-pattern>
+  </servlet-mapping>
+  
+<servlet>
+  <servlet-name>ListStudents</servlet-name>
+  <!-- <servlet-class>com.jspider.login.servlet.ListStudents</servlet-class> -->
+  <jsp-file>/jsp/listStudents.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ListStudents</servlet-name>
+  <url-pattern>/ListStudents</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

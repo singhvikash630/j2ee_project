@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>jsp</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>includeDirectiveJsp/includeDirective.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  <servlet-name>CurrentDateTime</servlet-name>
+  <servlet-class>com.jspider.servlet.CurrentDateTime</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>CurrentDateTime</servlet-name>
+  <url-pattern>/CurrentDateTime</url-pattern>
+  </servlet-mapping>
+ 
+  
+  
+  <servlet>
+  <servlet-name>date</servlet-name>
+  <jsp-file>/implicitObjectJsp/date.jsp</jsp-file>
+  <init-param>
+  <param-name>Actor</param-name>
+  <param-value>AmirKhan</param-value>
+  </init-param>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>date</servlet-name>
+  <url-pattern>/date</url-pattern>
+  </servlet-mapping>
+ 
+ <servlet>
+  <servlet-name>dateTime</servlet-name>
+  <jsp-file>/forwardActionJsp/forward.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>dateTime</servlet-name>
+  <url-pattern>/dateTime</url-pattern>
+  </servlet-mapping>
+ 
+ <servlet>
+  <servlet-name>include</servlet-name>
+  <jsp-file>/includeActionJsp/include.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>include</servlet-name>
+  <url-pattern>/include</url-pattern>
+  </servlet-mapping>
+ 
+ <servlet>
+  <servlet-name>useBean</servlet-name>
+  <jsp-file>/useBeanActionJsp/useBean.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>useBean</servlet-name>
+  <url-pattern>/useBean</url-pattern>
+  </servlet-mapping>
+ 
+ 
+  <context-param>
+    <param-name>email</param-name>
+    <param-value>vikash@gmail.com</param-value>
+  </context-param>
+  
+</web-app>

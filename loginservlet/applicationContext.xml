@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+                    
+<bean id="capitalBean" class="com.jspider.springs.bean.Capital">
+<property name="capitalName" value="Delhi" />
+</bean>
+
+<!--DI WITH SETTER METHOD
+ <bean id="countryBean" class="com.jspider.springs.bean.Country">
+<property name="countryName" value="India" />
+<property name="capitalObj" ref="capitalBean" />
+</bean>
+ -->
+<bean id="countryBean" class="com.jspider.springs.bean.Country">
+
+<!--DI WITH CONSTRUCTOR ARGUMENT INDEX
+<constructor-arg index="0" value="India"/>
+<constructor-arg index="1" ref="capitalBean"/> -->
+
+<!--DI WITH CONSTRUCTOR ARGUMENT TYPE MATCHING
+<constructor-arg index="0" type="java.lang.String" value="India"/>
+<constructor-arg index="1" type="Capital" ref="capitalBean"/>
+ -->
+  
+ <!-- DI WITH CONSTRUCTOR ARGUMENT RESOLUTION 
+  <constructor-arg>
+ <value>India</value>
+ </constructor-arg>
+ <constructor-arg>
+ <ref bean="capitalBean"/>
+ </constructor-arg>
+  -->
+  
+<!--DI WITH CONSTRUCTOR ARGUMENT NAME-->
+<constructor-arg name="countryName" value="India"/>
+<constructor-arg name="capitalObj" ref="capitalBean"/> 
+</bean> 
+
+<bean id="bBean" class="com.jspider.springs.bean.B">
+<property name="aRef" ref="aBean" />
+</bean>
+<bean id="aBean" class="com.jspider.springs.bean.A">
+<property name="bRef" ref="bBean" />
+</bean>
+ 
+
+
+</beans>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Hello Form</title>
+</head>
+<body bgcolor="pink">
+<form action="RedirectServlet" method="get">
+
+<h1 align="center">PARAMETER</h1>
+<br><br>
+I AM:
+<input TYPE="text" NAME="fname">
+<br><br>
+Gender:
+
+Male<input type="radio" name="gender" value="male">
+Female<input type="radio" name="gender" value="female">
+<br><br>
+I LIKE:
+Coffee<input type="checkbox" name="drink" value="coffee">
+Tea<input type="checkbox" name="drink" value="tea">
+Juice<input type="checkbox" name="drink" value="juice">
+<br><br>
+I KNOW:
+<br>
+<select multiple name="tech">
+      <option value="java">COREJAVA</option>
+      <option value="jdbc">JDBC</option>
+      <option value="servlet">SERVLET</option>
+</select>
+<br><br>
+
+<input type="hidden" name="HiddenData" value="ABCD">
+<input type="submit" value="Login">
+</form>
+</body>
+</html>
